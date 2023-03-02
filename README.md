@@ -14,7 +14,7 @@ Full stack projects involve both front-end and back-end development.
 
         1. Client Side Design
          
-            * Create 4 Module and 14 Component
+           * Create 4 Module and 14 Component
             
                 a. app-common
                    - Header 
