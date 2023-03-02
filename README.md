@@ -6,8 +6,11 @@ Full stack projects involve both front-end and back-end development.
 
 
 - [x] **High Level Design**
+
         - Client Side Design
-            + Create 4 Module and 14 Component
+        - 
+            * Create 4 Module and 14 Component
+            
                 1. app-common
                     * Header 
                     * Footer
@@ -34,15 +37,16 @@ Full stack projects involve both front-end and back-end development.
         - Server Side Design
  
  - [ ] **Admin Module**
-         - SignUp
-         - Lombok integration
-         - Validations in SignUp
-         - Mail API Configuration
-         - Activate Mail Id
-         - Finalizing SignUp
-         - Login
-         - Change in the Design
-         - Change Password
+
+         * SignUp
+         * Lombok integration
+         * Validations in SignUp
+         * Mail API Configuration
+         * Activate Mail Id
+         * Finalizing SignUp
+         * Login
+         * Change in the Design
+         * Change Password
 
 
 
