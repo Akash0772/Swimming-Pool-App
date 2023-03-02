@@ -7,8 +7,8 @@ Full stack projects involve both front-end and back-end development.
 
 - [x] **High Level Design**
 
-        - Client Side Design
-        - 
+        -  Client Side Design
+         
             * Create 4 Module and 14 Component
             
                 1. app-common
