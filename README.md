@@ -15,28 +15,25 @@ Full stack projects involve both front-end and back-end development.
    * Create 4 Module and 14 Component
      a. app-common
         - Header 
-         - Footer
-
-                b. Admin
-                   * SignUp
-                    * Login
-                    * LogOut
-                    * Change Password
-                    * Forget-Password
-                    * My Profile
+        - Footer
+     b. Admin
+        - SignUp
+        - Login
+        - LogOut
+        - Change Password
+        - Forget-Password
+        - My Profile
+     c. Owner
+        - Add-Content
+        - List All Booking
+        - List All content
                    
-                c. Owner
-                    * Add-Content
-                    * List All Booking
-                    * List All content
-                   
-                d. User
-                    * Book
-                    * My Booking
-                    * Search 
+     d. User
+        - Book
+        - My Booking
+        - Search 
 
-
-        2. Server Side Design
+2. Server Side Design
  
  
  - [ ] **Admin Module**
