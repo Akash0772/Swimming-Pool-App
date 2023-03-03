@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isLoggedIn(){
+    var username = sessionStorage.getItem('username');
+    var status = false;
+    if(username){
+      status = true;
+    }
+    return status;
+  }
 
+  isOwner(){
+    var role = sessionStorage.getItem('role');
+    return role == 'owner';
+  }
+
+  isCustomer(){
+    var role = sessionStorage.getItem('role');
+    return role == 'customer';
+  }
 }

@@ -5,17 +5,25 @@ import { SpAdminRoutingModule } from './sp-admin-routing.module';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
     SignupComponent,
     LoginComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    MyprofileComponent,
+    LogoutComponent,
+    ChangePasswordComponent
   ],
   imports: [
     CommonModule,
-    SpAdminRoutingModule
+    SpAdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SpAdminModule { }

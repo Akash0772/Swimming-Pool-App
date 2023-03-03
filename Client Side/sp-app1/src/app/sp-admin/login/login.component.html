@@ -1,1 +1,7 @@
-<p>login works!</p>
+<form [formGroup] ="login" *ngIf="!status" (ngSubmit)="save()">
+    Email Id: <input type="text" formControlName="username"> <br>
+    Password: <input type="password" formControlName="password"> <br>
+    <input type="submit" value="submit">
+</form>
+
+<div *ngIf="status">Login Success</div>
