@@ -1,7 +1,25 @@
-<form [formGroup] ="login" *ngIf="!status" (ngSubmit)="save()">
-    Email Id: <input type="text" formControlName="username"> <br>
-    Password: <input type="password" formControlName="password"> <br>
-    <input type="submit" value="submit">
-</form>
+<div class="headlogin">
+    <form [formGroup] ="login" *ngIf="!status" (ngSubmit)="save()">
+        Email Id: <input type="text" formControlName="username"> <br>
+        Password: <input type="password" formControlName="password"> <br>
+        <input type="submit" value="submit">
+    </form>
+</div>
 
-<div *ngIf="status">Login Success</div>
+
+
+<!-- <body>
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form" [formGroup] ="login" *ngIf="!status" (ngSubmit)="save()">
+            Email Id: <input type="text" formControlName="username"> <br>
+            Password: <input type="password" formControlName="password"> <br>
+            <input type="submit" value="submit"> 
+            <button>login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+</body>
+-->
+<div *ngIf="status">Login Success</div> 
