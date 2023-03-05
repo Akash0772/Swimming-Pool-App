@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     SignupComponent,
@@ -23,7 +23,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     CommonModule,
     SpAdminRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class SpAdminModule { }

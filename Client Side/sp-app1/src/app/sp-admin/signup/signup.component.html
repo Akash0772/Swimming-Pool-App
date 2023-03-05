@@ -1,1 +1,16 @@
-<p>signup works!</p>
+<div>
+    <form [formGroup]="owner" (ngSubmit)="save()" *ngIf="status == false">
+        Id: <input type="text" formControlName="id"/> <br>
+        First Name: <input type="text" formControlName="firstName"/> <br>
+        Last Name: <input type="text" formControlName="lastName"/> <br>
+        Mobile Number: <input type="text" formControlName="mobileNumber"/> <br>
+        Email: <input type="text" formControlName="email"/> <br>
+        Password: <input type="password" formControlName="password"/> <br>
+        <input type="submit" value="signup"/>
+    </form>
+</div>
+
+<div *ngIf="status == true">
+    Signup success...
+    Congratulation
+</div>

@@ -1,53 +1,70 @@
 <!-- Heder Section -->
-<div class="header">
-  <nav class="navbar navbar-expand-lg navbar bg-primary">
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">Swimming Pool</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Swimming Pool</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/signup" *ngIf="!isLoggedIn()">Signup</a>
+          <a class="nav-link" routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+          <a class="nav-link" routerLink="about" routerLinkActive="active-link">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/forgot-password" *ngIf="!isLoggedIn()">Forgot Password</a>
+          <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/add-sp" *ngIf="isOwner()">Add</a>
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active-link" *ngIf="!isLoggedIn()">Signup</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/list-my-sps"  *ngIf="isOwner()">List My SPS</a>
+          <a class="nav-link" routerLink="/login" routerLinkActive="active-link" *ngIf="!isLoggedIn()">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/list-booking-sps" *ngIf="isOwner()">List Booking SPS</a>
+          <a class="nav-link" routerLink="/forgot-password" routerLinkActive="active-link" *ngIf="!isLoggedIn()">Forgot Password</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add-sp" routerLinkActive="active-link" *ngIf="isOwner()">Add</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/list-my-sps" routerLinkActive="active-link" *ngIf="isOwner()">List My SPS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/list-booking-sps" routerLinkActive="active-link" *ngIf="isOwner()">List Booking SPS</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/search-sp" *ngIf="isCustomer()">Search SP</a>
+          <a class="nav-link" routerLink="/search-sp" routerLinkActive="active-link" *ngIf="isCustomer()">Search SP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/book-sp" *ngIf="isCustomer()">Book SP</a>
+          <a class="nav-link" routerLink="/book-sp" routerLinkActive="active-link" *ngIf="isCustomer()">Book SP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/my-booking" *ngIf="isCustomer()">My Booking</a>
+          <a class="nav-link" routerLink="/my-booking" routerLinkActive="active-link" *ngIf="isCustomer()">My Booking</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/myprofile" *ngIf="isLoggedIn()">My Profile</a>
+          <a class="nav-link" routerLink="/myprofile" routerLinkActive="active-link" *ngIf="isLoggedIn()">My Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/logout" *ngIf="isLoggedIn()">Logout</a>
+          <a class="nav-link" routerLink="/logout" routerLinkActive="active-link" *ngIf="isLoggedIn()">Logout</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/change-password" *ngIf="isLoggedIn()">Change-Password</a>
+          <a class="nav-link" routerLink="/change-password" routerLinkActive="active-link" *ngIf="isLoggedIn()">Change-Password</a>
         </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
       </ul>
     </div>
-    </div>
-  </nav>
-</div>
-
-
+  </div>
+</nav>
