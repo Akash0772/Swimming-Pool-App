@@ -1,0 +1,102 @@
+.banner
+{
+    background-image: url('../../../assets/img/bannering.jpg');
+    height: 600px;
+    background-position: center top;
+    background-size: cover;
+}
+
+.content
+{
+    top: 30%;
+    left: 15%;
+    position: absolute;
+}
+
+.content h1
+{
+    color: #fff;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.content p
+{
+    color: #fff;
+    /* font-size: 45px;
+    font-weight: bold; */
+    font-size: 18px;
+    /* left: 10%; */
+}
+
+.content a
+{
+    text-decoration: none;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+.content a:hover
+{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.stepBox
+{
+    padding: 50px 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stepBox h1
+{
+    font-size: 65px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+ 
+}
+.stepBox p
+{
+    font-size: 40px;
+    font-style: italic;
+    color: #fff;
+    text-align: left;
+  
+}
+.highlight
+{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+ #one
+{
+    background-image: url('../../../assets/img/s1.jpg') ;
+    background-position: center;
+    background-size: cover;
+    /* vertical-align: middle; */
+}
+
+#two
+{
+    background-image: url('../../../assets/img/s2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#three
+{
+    background-image: url('../../../assets/img/s3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+p:hover
+{
+    color: red;
+}
