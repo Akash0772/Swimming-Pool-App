@@ -8,20 +8,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.akash.spapp1.entity.Owner;
-import com.akash.spapp1.service.OwnerService;
+import com.akash.spapp1.entity.Customer;
+import com.akash.spapp1.service.CustomerService;
 
 @RestController
-@RequestMapping("owner")
+@RequestMapping("customer")
 @CrossOrigin
-public class OwnerController {
-	
+public class CustomerController {
 	@Autowired
-	private OwnerService ownerService;
+	private CustomerService customerService;
 	
 	@PostMapping
-	public ResponseEntity<Owner> save(@RequestBody Owner owner){
-		System.out.println(owner.getFirstName());
-		return ResponseEntity.ok(ownerService.save(owner));
+	public ResponseEntity<Customer> save(@RequestBody Customer customer){
+		return ResponseEntity.ok(customerService.save(customer));
 	}
 }

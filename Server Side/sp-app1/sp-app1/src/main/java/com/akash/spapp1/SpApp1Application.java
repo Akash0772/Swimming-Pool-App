@@ -8,7 +8,7 @@ public class SpApp1Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpApp1Application.class, args);
-		System.out.println("Run Successfully");
+		System.out.println("Run Successfully Application....");
 	}
 
 }
