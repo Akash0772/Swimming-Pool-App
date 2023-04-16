@@ -19,7 +19,7 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	@PostMapping
-	public ResponseEntity<Customer> save(@RequestBody Customer customer){
+	public ResponseEntity<Customer> save(@RequestBody Customer customer) throws Exception{
 		return ResponseEntity.ok(customerService.save(customer));
 	}
 }

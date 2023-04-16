@@ -1,5 +1,6 @@
 package com.akash.spapp1.service;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,14 @@ public class CustomerService {
 	@Autowired
 	private CustomerRepository customerRepository;
 	
-	public Customer save(Customer customer) {
-		return customerRepository.save(customer);
+	@Autowired
+	private MailService mailService;
+	
+	public Customer save(Customer customer) throws Exception{
+//		db service
+		customer = customerRepository.save(customer);
+//		mail service	
+		mailService.sendMailToVerifyEmailId(customer.getEmail());
+		return customer;
 	}
 }
