@@ -1,14 +1,38 @@
-<div>
     <form [formGroup]="owner" (ngSubmit)="save()" *ngIf="status == false">
-        Id: <input type="text" formControlName="id"/> <br>
+        <!-- Id: <input type="text" formControlName="id"/> <br>
         First Name: <input type="text" formControlName="firstName"/> <br>
         Last Name: <input type="text" formControlName="lastName"/> <br>
         Mobile Number: <input type="text" formControlName="mobileNumber"/> <br>
         Email: <input type="text" formControlName="email"/> <br>
         Password: <input type="password" formControlName="password"/> <br>
+        User Type: <br>
+        Owner <input type="radio" formControlName="userType" value="owner"/> &nbsp;&nbsp;&nbsp;
+        Customer <input type="radio" formControlName="userType" value="customer"/><br>
+        <input type="submit" value="signup"/> -->
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" formControlName="id" class="form-control" id="id"/>
+            <div *ngIf="id?.touched && id?.invalid" class="alert alert-danger">  
+                Please fill out this field.
+            </div>
+        </div>
+        <!-- First Name: <input type="text" formControlName="firstName"/> <br> -->
+        <div class="form-group">
+            <label for="firstName">firstName:</label>
+            <input type="text" formControlName="firstName" class="form-control" id="firstName">
+            <div *ngIf="firstName?.touched && firstName?.invalid" class="alert alert-danger">  
+                First Nmae is required
+            </div>
+        </div>
+        Last Name: <input type="text" formControlName="lastName"/> <br>
+        Mobile Number: <input type="text" formControlName="mobileNumber"/> <br>
+        Email: <input type="text" formControlName="email"/> <br>
+        Password: <input type="password" formControlName="password"/> <br>
+        User Type: <br>
+        Owner <input type="radio" formControlName="userType" value="owner"/> &nbsp;&nbsp;&nbsp;
+        Customer <input type="radio" formControlName="userType" value="customer"/><br>
         <input type="submit" value="signup"/>
     </form>
-</div>
 
 <div *ngIf="status == true">
     Signup success...

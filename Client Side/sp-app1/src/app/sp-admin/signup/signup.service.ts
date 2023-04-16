@@ -11,6 +11,14 @@ export class SignupService {
   }
 
   doSignup(owner: any){
-    return this.httpclient.post<any>(this.url + "/owner", owner.value);
+    var signupUrl = this.url
+    if(owner.value.userType == 'owner'){
+      signupUrl += '/owner';
+    }
+    else
+    {
+      signupUrl += '/customer';
+    }
+    return this.httpclient.post<any>(signupUrl, owner.value);
   }
 }

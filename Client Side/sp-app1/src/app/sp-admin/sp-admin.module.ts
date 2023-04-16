@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     ForgotPasswordComponent,
     MyprofileComponent,
     LogoutComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
   ],
   imports: [
     CommonModule,

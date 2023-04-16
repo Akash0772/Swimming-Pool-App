@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SignupService } from './signup.service';
 
 @Component({
@@ -12,16 +12,25 @@ export class SignupComponent {
   status: boolean = false;
   constructor(private service: SignupService, private formBuider: FormBuilder){
     this.owner = formBuider.group({
-      id: new FormControl(),
+      id: new FormControl('', Validators.required),
       firstName: new FormControl(),
       lastName: new FormControl(),
       mobileNumber: new FormControl(),
       email: new FormControl(),
-      password: new FormControl()
+      password: new FormControl(),
+      userType: new FormControl()
     });
   }
 
+  get id(){
+    return this.owner.get('id');
+  }
+  get firstName(){
+    return this.owner.get('firstName');
+  }
   save(){
+    // console.log(this.owner.value);
+    // console.log(this.owner.value.userType);
     this.service.doSignup(this.owner).subscribe(
       r1 => {
         console.log(r1);
