@@ -16,22 +16,67 @@
                 Please fill out this field.
             </div>
         </div>
+        <br>
         <!-- First Name: <input type="text" formControlName="firstName"/> <br> -->
         <div class="form-group">
-            <label for="firstName">firstName:</label>
-            <input type="text" formControlName="firstName" class="form-control" id="firstName">
+            <label for="firstName">First Name:</label>
+            <input type="text" formControlName="firstName" class="form-control" id="firstName"/>
             <div *ngIf="firstName?.touched && firstName?.invalid" class="alert alert-danger">  
                 First Nmae is required
             </div>
         </div>
-        Last Name: <input type="text" formControlName="lastName"/> <br>
-        Mobile Number: <input type="text" formControlName="mobileNumber"/> <br>
-        Email: <input type="text" formControlName="email"/> <br>
-        Password: <input type="password" formControlName="password"/> <br>
-        User Type: <br>
+        <br>
+        <!-- Last Name: <input type="text" formControlName="lastName"/> <br> -->
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" formControlName="lastName" class="form-control" id="lastName"/>
+            <div *ngIf="lastName?.touched && lastName?.invalid" class="alert alert-danger">  
+                Last Nmae is required
+            </div>
+        </div>
+        <br>
+        <!-- Mobile Number: <input type="text" formControlName="mobileNumber"/>  -->
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="text" formControlName="mobileNumber" class="form-control" id="mobileNumber"/>
+            <div *ngIf="mobileNumber?.touched && mobileNumber?.invalid" class="alert alert-danger">  
+                Mobile Number is required
+            </div>
+        </div>
+        <br>
+        <!-- Email: <input type="text" formControlName="email"/>  -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" class="form-control" id="email"/>
+            <div *ngIf="email?.touched && email?.invalid" class="alert alert-danger">  
+                Email is required
+            </div>
+        </div>
+        <br>
+        <!-- Password: <input type="password" formControlName="password"/>  -->
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" formControlName="password" class="form-control" id="password"/>
+            <div *ngIf="password?.touched && password?.invalid" class="alert alert-danger">  
+                Password is required
+            </div>
+        </div>
+        <br>
+        <!-- User Type: <br>
         Owner <input type="radio" formControlName="userType" value="owner"/> &nbsp;&nbsp;&nbsp;
-        Customer <input type="radio" formControlName="userType" value="customer"/><br>
-        <input type="submit" value="signup"/>
+        Customer <input type="radio" formControlName="userType" value="customer"/><br> -->
+        <div class="form-group">
+            <label for="userType">User Type:</label>
+            <input type="radio" formControlName="userType" class="form-control" id="userType" value="owner"/>Owner
+            <input type="radio" formControlName="userType" class="form-control" id="userType" value="customer"/>Customer
+            <div *ngIf="userType?.touched && userType?.invalid" class="alert alert-danger">
+                User Type is required
+            </div>
+        </div>
+        <!-- <input type="submit" value="signup"/> -->
+        <div class="form-group">
+            <input type="submit" value="signup" class="form-control"/>
+        </div>
     </form>
 
 <div *ngIf="status == true">
