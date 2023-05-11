@@ -14,3 +14,7 @@ body
     height: 100vh;
     font-weight: Arial, Helvetica, sans-serif;
 }
+form{
+    padding: 20px;
+    width: 800px;
+}

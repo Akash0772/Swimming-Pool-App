@@ -8,10 +8,10 @@ import { SignupService } from './signup.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  owner: FormGroup;
+  user: FormGroup;
   status: boolean = false;
   constructor(private service: SignupService, private formBuider: FormBuilder){
-    this.owner = formBuider.group({
+    this.user = formBuider.group({
       id: new FormControl('', Validators.required),
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
@@ -23,34 +23,34 @@ export class SignupComponent {
   }
 
   get id(){
-    return this.owner.get('id');
+    return this.user.get('id');
   }
   get firstName(){
-    return this.owner.get('firstName');
+    return this.user.get('firstName');
   }
   get lastName(){
-    return this.owner.get('lastName');
+    return this.user.get('lastName');
   }
   get mobileNumber(){
-    return this.owner.get('mobileNumber');
+    return this.user.get('mobileNumber');
   }
   get email(){
-    return this.owner.get('email');
+    return this.user.get('email');
   }
   get password(){
-    return this.owner.get('password');
+    return this.user.get('password');
   }
   get userType(){
-    return this.owner.get('userType');
+    return this.user.get('userType');
   }
   save(){
     // console.log(this.owner.value);
     // console.log(this.owner.value.userType);
-    if(this.owner.invalid){
-      this.owner.markAllAsTouched();
+    if(this.user.invalid){
+      this.user.markAllAsTouched();
       return;
     }
-    this.service.doSignup(this.owner).subscribe(
+    this.service.doSignup(this.user).subscribe(
       r1 => {
         console.log(r1);
         this.status =true;

@@ -1,4 +1,4 @@
-    <form [formGroup]="owner" (ngSubmit)="save()" *ngIf="status == false">
+    <form [formGroup]="user" (ngSubmit)="save()" *ngIf="status == false">
         <!-- Id: <input type="text" formControlName="id"/> <br>
         First Name: <input type="text" formControlName="firstName"/> <br>
         Last Name: <input type="text" formControlName="lastName"/> <br>
@@ -67,19 +67,19 @@
         Customer <input type="radio" formControlName="userType" value="customer"/><br> -->
         <div class="form-group">
             <label for="userType">User Type:</label>
-            <input type="radio" formControlName="userType" class="form-control" id="userType" value="owner"/>Owner
-            <input type="radio" formControlName="userType" class="form-control" id="userType" value="customer"/>Customer
+            <input type="radio" formControlName="userType" class="form-check-input" id="userType" value="owner"/>Owner
+            <input type="radio" formControlName="userType" class="form-check-input" id="userType" value="customer"/>Customer
             <div *ngIf="userType?.touched && userType?.invalid" class="alert alert-danger">
                 User Type is required
             </div>
         </div>
         <!-- <input type="submit" value="signup"/> -->
         <div class="form-group">
-            <input type="submit" value="signup" class="form-control"/>
+            <input type="submit" value="signup" class="btn btn-primary"/>
         </div>
     </form>
 
 <div *ngIf="status == true">
-    Signup success...
-    Congratulation
+We have sent a mail to your mail box. 
+Please active the same to finsh the signup.
 </div>
