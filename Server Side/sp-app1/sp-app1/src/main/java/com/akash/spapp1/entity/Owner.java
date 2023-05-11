@@ -20,7 +20,9 @@ public class Owner {
 	private Long mobileNumber;
 	private String email;
 	private String password;
-	@OneToMany
+	private String activationCode;
+	private int status = 0; // 0 ==> yet to verify, 1 ==> verified
+	@OneToMany(mappedBy="owner")
 	private Set<SwimmingPool> swimmingPools = new HashSet<>();
 //	we will consider other fields later
 }
